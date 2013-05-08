@@ -1,6 +1,3 @@
-var url  = require("url");
-var path = require("path")
-
 module.exports = function(options) {
   options = options || {};
 
