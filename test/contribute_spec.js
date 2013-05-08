@@ -18,7 +18,7 @@ describe("contribute()", function() {
     it("should not set headers", function(done) {
       because(options, function() {
         should.not.exist(res.headers["X-ContributeUrl"]);
-        should.not.exist(res.headers["X-IssuesLocation"]);
+        should.not.exist(res.headers["X-IssuesUrl"]);
         done();
       });
     });
@@ -30,7 +30,7 @@ describe("contribute()", function() {
     it("should not set headers", function(done) {
       because(options, function() {
         should.not.exist(res.headers["X-ContributeUrl"]);
-        should.not.exist(res.headers["X-IssuesLocation"]);
+        should.not.exist(res.headers["X-IssuesUrl"]);
         done();
       });
     });
@@ -39,7 +39,7 @@ describe("contribute()", function() {
   describe("when options are explicit", function() {
     var options = {
       contributeUrl: "http://example.com/contribute",
-      issuesLocation: "http://example.com/issues"
+      issuesUrl: "http://example.com/issues"
     };
 
     it("should add X-ContributeUrl to response from options", function(done) {
@@ -49,9 +49,9 @@ describe("contribute()", function() {
       });
     });
 
-    it("should add X-IssuesLocation to response from options", function(done) {
+    it("should add X-IssuesUrl to response from options", function(done) {
       because(options, function() {
-        res.headers["X-IssuesLocation"].should.equal("http://example.com/issues");
+        res.headers["X-IssuesUrl"].should.equal("http://example.com/issues");
         done();
       });
     });
@@ -67,9 +67,9 @@ describe("contribute()", function() {
       });
     });
 
-    it("should add X-IssuesLocation to response from repository location", function(done) {
+    it("should add X-IssuesUrl to response from repository location", function(done) {
       because(options, function() {
-        res.headers["X-IssuesLocation"].should.equal("https://github.com/dustyburwell/connect-contribute/issues");
+        res.headers["X-IssuesUrl"].should.equal("https://github.com/dustyburwell/connect-contribute/issues");
         done();
       });
     });
@@ -78,7 +78,7 @@ describe("contribute()", function() {
   describe("when package.json options are used and overrides are specified", function() {
     var options = { 
       contributeUrl: "http://example.com/contribute",
-      issuesLocation: "http://example.com/issues",
+      issuesUrl: "http://example.com/issues",
       repository: { 
         url: "https://github.com/dustyburwell/connect-contribute.git" 
       } 
@@ -91,9 +91,9 @@ describe("contribute()", function() {
       });
     });
 
-    it("should add X-IssuesLocation to response from options", function(done) {
+    it("should add X-IssuesUrl to response from options", function(done) {
       because(options, function() {
-        res.headers["X-IssuesLocation"].should.equal("http://example.com/issues");
+        res.headers["X-IssuesUrl"].should.equal("http://example.com/issues");
         done();
       });
     });
