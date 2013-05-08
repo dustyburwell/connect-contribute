@@ -1,0 +1,18 @@
+{
+  "name": "connect-contribute",
+  "version": "0.1.0",
+  "description": "A connect middleware for serving contribute headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustyburwell/connect-contribute.git"
+  },
+  "author": "Dusty Burwell",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.9.0"
+  }
+}
