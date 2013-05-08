@@ -4,7 +4,7 @@
   "description": "A connect middleware for serving contribute headers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,8 @@
   "author": "Dusty Burwell",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.9.0"
+    "mocha": "~1.9.0",
+    "should": "~1.2.2",
+    "spies": "~0.1.6"
   }
 }
